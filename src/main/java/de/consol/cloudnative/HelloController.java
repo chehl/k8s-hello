@@ -19,7 +19,7 @@ public class HelloController {
 
     @RequestMapping("/")
     public String sayHello() {
-        final String greeting = environment.getProperty("GREETING", "Hi");
+        final String greeting = environment.getProperty("GREETING", "Hello");
         final String msg = String.format("%s (%s, %s)", greeting, invokedCount++, hostname);
         System.out.println(msg);
         return msg;
